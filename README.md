@@ -33,7 +33,7 @@ This resource will walk you through overcoming the technical hurdles to have a w
 *	USB mouse
 *	HDMI cable
 *	Ethernet cable
-*	LAN with Internet connection
+*	LAN with internet connection
 *	A monitor or TV
 *	Raspberry Pi NoIR Camera Board - has a **black** circuit board (try [CPC](http://cpc.farnell.com/jsp/search/productdetail.jsp?sku=SC13223 "RPI NOIR CAMERA BOARD - RASPBERRY-PI"))
 *	**Female** to **Female** jumper wires, at least 3 (try [Pimoroni](http://shop.pimoroni.com/collections/components "Components - Pimoroni"))
@@ -65,7 +65,7 @@ The image will look black and white (greyscale) because there are no wavelengths
 
 Pictured above is the special version of the Raspberry Pi camera board called Pi NoIR. It's essentially identical to the normal green camera but it has no infrared filter, meaning that it lets in infrared light. This camera, combined with an infrared light source, will give you night vision. It's also small and won't be too intrusive when mounted on the inside of a bird box.
 
-## Step 0: Setting Up your Pi
+## Step 0: Setting up your Pi
 
 First check that you have all the parts you need to get your Raspberry Pi set up and working.
 
@@ -77,7 +77,7 @@ First check that you have all the parts you need to get your Raspberry Pi set up
 - HDMI cable
 - A monitor or TV
 
-###Activity Checklist:
+###Activity checklist:
 
 1.	Place the SD card into the slot of your Raspberry Pi. It will only fit one way so be careful not to break the card. 
 2.	Next connect the HDMI cable from the monitor (or TV) to the HDMI port on the Pi and turn on your monitor. 
@@ -103,14 +103,14 @@ You'll notice that everything looks a little strange. This is because you're loo
 
 Press `Ctrl - C` when you want to exit.
 
-##Step 2: Wiring up the Infrared LED
+##Step 2: Wiring up the infrared LED
 
 The intention is to have a single infrared LED illuminating the inside of the bird box, to allow the Pi NoIR camera to see something. The 890nm IR LED is an identical component to the ones found inside TV remote controls. The only difference is that we're going to keep it on constantly to facilitate the live stream.
 
 First check that you have all the required parts to do this:
 
 * **Female** to **Female** jumper wires, at least 3
-* 220 Ohm Resistor
+* 220 Ohm resistor
 * Infrared LED 5mm 890nm
 
 You should do this with the Raspberry Pi turned off and unplugged from the mains for safety. Use the following command to shut down the Pi:
@@ -119,9 +119,9 @@ You should do this with the Raspberry Pi turned off and unplugged from the mains
 
 Wait for the ACT (activity) LED to stop blinking before turning off the power.
 
-If you've wired up an LED to the Pi GPIO pins before, then please note that *this* LED needs to be done slightly differently. An infrared LED requires more current than the general purpose pins can provide. It needs to be connected directly to the 5 volt supply of the Raspberry Pi with a 220 ohm resistor inline; without the resistor the current will be too high, and the LED will burn out after about ten seconds.
+If you've wired up an LED to the Pi GPIO pins before, then please note that **this** LED needs to be done slightly differently. An infrared LED requires more current than the general purpose pins can provide. It needs to be connected directly to the 5 volt supply of the Raspberry Pi with a 220 ohm resistor inline; without the resistor the current will be too high, and the LED will burn out after about ten seconds.
 
-Ensure that you have the correct type of resistor; it needs to be 220 ohms *not* 220K ohms (220 thousand). The 5 band resistor colour code is red - red - black - black - brown. Please refer to the [electronic colour code](http://en.wikipedia.org/wiki/Electronic_color_code "Electronic color code - Wikipedia, the free encyclopedia") system for further guidance. This is what the resistor should look like:
+Ensure that you have the correct type of resistor; it needs to be 220 ohms **not** 220K ohms (220 thousand). The 5 band resistor colour code is red - red - black - black - brown. Please refer to the [electronic colour code](http://en.wikipedia.org/wiki/Electronic_color_code "Electronic color code - Wikipedia, the free encyclopedia") system for further guidance. This is what the resistor should look like:
 
 ![](./images/220ohm.JPG "220 Ohm resistor")
 
@@ -155,7 +155,7 @@ Bird boxes tend to be quite small, and because of this you will probably need to
 
 ![](./images/focal-length.png "Focal length diagram")
 
-The focal *length* of the camera is the distance from the front of the lens to the closest object which is in focus. The *depth of field* is the range within which objects appear to be in focus.
+The focal **length** of the camera is the distance from the front of the lens to the closest object which is in focus. The **depth of field** is the range within which objects appear to be in focus.
 
 The Pi camera board has a focal length of about 50 cm and a depth of field of 50 cm to infinity. This means that objects will only appear in focus if they’re at least 50 cm away from the lens of the camera. If objects are closer then they will be blurry and out of focus. The Gardman bird box is about 18 cm high on the inside; therefore we know that if the camera is stuck to the inside of the roof, all objects are going to be 18 cm or closer. If we want them to be in focus then the camera focal depth will need to be reduced.
 
@@ -165,7 +165,7 @@ As an experiment try putting some car keys into the bird box and, with the roof 
 
 Press `Ctrl - C` when you want to exit.
 
-The Raspberry Pi NoIR camera has a lens that can rotate to adjust the focus; however, it's sold as a fixed focus camera. The camera actually ships with three blobs of glue to hold the rotatable lens in place. Look at the image below; the letters *A*, *B* and *C* mark the location of the glue:
+The Raspberry Pi NoIR camera has a lens that can rotate to adjust the focus; however, it's sold as a fixed focus camera. The camera actually ships with three blobs of glue to hold the rotatable lens in place. Look at the image below; the letters **A**, **B** and **C** mark the location of the glue:
 
 ![](./images/pi-noir-glue.jpg "Pi NoIR glue location")
 
@@ -263,7 +263,7 @@ Here are some ideas for making the installation more permanent and protecting it
 
 *   Choosing a site which is beneath the overhang of an existing roof will help a lot, so the bird box will not be rained on directly.
 
-*   Factor in getting power and an Internet connection to the bird box, as well as avoiding prevailing winds and the risk of predators. You could use a wireless USB dongle but Ethernet is more reliable for streaming video, especially in built-up areas that have a lot of wireless traffic.
+*   Factor in getting power and an internet connection to the bird box, as well as avoiding prevailing winds and the risk of predators. You could use a wireless USB dongle but Ethernet is more reliable for streaming video, especially in built-up areas that have a lot of wireless traffic.
 
 *   Preventing ingress of water should be a priority. The roof of the bird box could be sealed using silicone sealant, which is often used to seal the edges of windows and bathroom sinks.
 
@@ -271,13 +271,13 @@ Here are some ideas for making the installation more permanent and protecting it
 
 *   You may be tempted to use [Never Wet](http://www.neverwet.com/ "Superhydrophobic Coatings | Corrosion Control & Waterproof Coatings | NeverWet") spray. While this works very well at waterproofing things, it degrades after some time and will not be a permanent solution.
 
-## Step 5: Streaming video to the Internet
+## Step 5: Streaming video to the internet
 
-[Ustream](http://www.ustream.tv/) is one of the most popular live video streaming sites on the Internet. It's used by NASA to stream video from the [International Space Station](http://www.ustream.tv/channel/live-iss-stream "Live_ISS_Stream on USTREAM") to all over the world. Websites like [Ustream](http://www.ustream.tv/), [YouTube Live](http://www.youtube.com/live), [Bambuser](http://bambuser.com/) and [justin.tv](http://www.justin.tv/) are known as *content distribution services*.
+[Ustream](http://www.ustream.tv/) is one of the most popular live video streaming sites on the internet. It's used by NASA to stream video from the [International Space Station](http://www.ustream.tv/channel/live-iss-stream "Live_ISS_Stream on USTREAM") to all over the world. Websites like [Ustream](http://www.ustream.tv/), [YouTube Live](http://www.youtube.com/live), [Bambuser](http://bambuser.com/) and [justin.tv](http://www.justin.tv/) are known as **content distribution services**.
 
-We need to use a service like this because you could potentially have thousands of people watching your bird box simultaneously. If you were to try and host that many viewers from your own Internet connection, your router would probably go into meltdown. There would simply not be enough upload [bandwidth](http://en.wikipedia.org/wiki/Bandwidth_%28computing%29 "Bandwidth (computing) - Wikipedia, the free encyclopedia").
+We need to use a service like this because you could potentially have thousands of people watching your bird box simultaneously. If you were to try and host that many viewers from your own internet connection, your router would probably go into meltdown. There would simply not be enough upload [bandwidth](http://en.wikipedia.org/wiki/Bandwidth_%28computing%29 "Bandwidth (computing) - Wikipedia, the free encyclopedia").
 
-With a content distribution service provider, you send your video content to them and they then host the connection to all the viewers. Therefore, you offload that bandwidth requirement from your own Internet connection *to them*. That way, you don't have to worry about how many people are concurrently watching the bird box or how much bandwidth is being used.
+With a content distribution service provider, you send your video content to them and they then host the connection to all the viewers. Therefore, you offload that bandwidth requirement from your own internet connection *to them*. That way, you don't have to worry about how many people are concurrently watching the bird box or how much bandwidth is being used.
 
 The only drawback is that there will be a delay on the video. For example, if you poked your finger into the bird box, you would only see it online 20 to 30 seconds later. Despite this, it will make a perfectly viable solution for sharing the bird box with the world.
 
@@ -311,7 +311,7 @@ Feel free to customise it; give your channel an avatar as well.
 
 The account will be free and will do everything we need it to. However, after 30 days some adverts will show on the side of the page where your live video is; this is part of the Ustream business model. You can buy a pro account and get access to many more features, as well as disabling adverts; that isn't necessary for this project, though.
 
-We need to copy two settings from your Ustream account to use on the Raspberry Pi: the *RTMP address* and the *stream key*. These two settings are needed by FFmpeg so that the data is streamed to the correct Ustream channel.
+We need to copy two settings from your Ustream account to use on the Raspberry Pi: the **RTMP address** and the **stream key**. These two settings are needed by FFmpeg so that the data is streamed to the correct Ustream channel.
 
 To find these two settings follow the steps below:
 
@@ -327,7 +327,7 @@ You should then see the screen below; however, the **RTMP URL** and **Stream Key
 
 ###Go live!
 
-The intention is to stream the video content from the bird box to the Internet on a 24/7 basis. Considering that sometimes Internet servers can go down, it's a good idea to ensure that the Raspberry Pi will keep trying to send out the video stream if there is a problem.
+The intention is to stream the video content from the bird box to the internet on a 24/7 basis. Considering that sometimes internet servers can go down, it's a good idea to ensure that the Raspberry Pi will keep trying to send out the video stream if there is a problem.
 
 To do that we can create a small shell script with a while loop; inside that loop is the command to start the stream. If something causes the stream command to go wrong and exit, the shell script will go around the loop and try the command again indefinitely.
 
@@ -386,7 +386,7 @@ Then, to start a new session enter the following command:
 
 `screen bash`
 
-This will now give you a blank session showing the command prompt. Enter the command below; this is the terminal equivalent of Task Manager in Windows:
+This will now give you a blank session showing the command prompt. Enter the command below; this is the terminal equivalent of Task Manager in Microsoft Windows:
 
 `top`
 
